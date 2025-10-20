@@ -1,6 +1,5 @@
 import './stylePage/CybersecurityPage.css';
 import wiresharkImage from '../assets/Imagenes/Wireshark.png';
-
 interface CybersecurityTool {
     id: number;
     name: string;

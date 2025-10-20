@@ -3,10 +3,10 @@ import angularImage from '../assets/Imagenes/angular.png';
 import javaImage from '../assets/Imagenes/java.png';
 import pythonImage from '../assets/Imagenes/python.png';
 import mongoImage from '../assets/Imagenes/mongo.png';
-import typescriptImage from '../assets/Imagenes/typescript.png'; // Asegúrate que el nombre de archivo sea correcto
+import typescriptImage from '../assets/Imagenes/typescript.png';
 import dockerImage from '../assets/Imagenes/docker.png';
 import gitImage from '../assets/Imagenes/git.png';
-import javascriptImage from '../assets/Imagenes/javascript.png'; // Corregí el nombre de archivo
+import javascriptImage from '../assets/Imagenes/javascript.png';
 import mysqlImage from '../assets/Imagenes/MySQL.png';
 import postgresqlImage from '../assets/Imagenes/PostgreSQL.png';
 import './stylePage/TechnologiesPage.css';
@@ -82,7 +82,6 @@ export const TechnologiesPage = () => {
                 ))}
             </div>
 
-            {/* Efectos de fondo */}
             <div className="background-effects">
                 <div className="floating-shape shape-1"></div>
                 <div className="floating-shape shape-2"></div>

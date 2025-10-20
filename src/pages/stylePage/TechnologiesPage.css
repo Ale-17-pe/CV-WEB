@@ -34,7 +34,6 @@
 .tech-header:hover::before {
     transform: scale(1.03);
 }
-
 .tech-header::after {
     content: '';
     position: absolute;

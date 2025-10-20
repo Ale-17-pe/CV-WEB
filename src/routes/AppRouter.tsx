@@ -10,6 +10,7 @@ import { TechnologiesPage } from '../pages/TechnologiesPage';
 import { CybersecurityPage } from '../pages/CybersecurityPage'; 
 import { ContactPage } from '../pages/ContactPage';
 
+
 const router = createBrowserRouter([
     {
         path: '/',

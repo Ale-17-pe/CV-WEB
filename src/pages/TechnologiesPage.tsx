@@ -1,4 +1,14 @@
-// src/pages/TechnologiesPage.tsx
+import reactImage from '../assets/Imagenes/react.png';
+import angularImage from '../assets/Imagenes/angular.png';
+import javaImage from '../assets/Imagenes/java.png';
+import pythonImage from '../assets/Imagenes/python.png';
+import mongoImage from '../assets/Imagenes/mongo.png';
+import typescriptImage from '../assets/Imagenes/typescript.png'; // Asegúrate que el nombre de archivo sea correcto
+import dockerImage from '../assets/Imagenes/docker.png';
+import gitImage from '../assets/Imagenes/git.png';
+import javascriptImage from '../assets/Imagenes/javascript.png'; // Corregí el nombre de archivo
+import mysqlImage from '../assets/Imagenes/MySQL.png';
+import postgresqlImage from '../assets/Imagenes/PostgreSQL.png';
 import './stylePage/TechnologiesPage.css';
 
 interface Technology {
@@ -13,109 +23,17 @@ interface Technology {
 
 export const TechnologiesPage = () => {
     const technologies: Technology[] = [
-        {
-            id: 1,
-            name: "React",
-            category: "Frontend",
-            level: "Básico",
-            description: "Biblioteca de JavaScript para construir interfaces de usuario interactivas y modernas",
-            image: "src/assets/Imagenes/react.png",
-            since: "2022"
-        },
-        
-        {
-            id: 10,
-            name: "Angular",
-            category: "Frontend",
-            level: "Básico",
-            description: "Biblioteca de JavaScript para construir interfaces de usuario interactivas y modernas",
-            image: "src/assets/Imagenes/angular.png",
-            since: "2022"
-        },
-
-         
-        {
-            id: 2,
-            name: "JAVA",
-            category: "Backend",
-            level: "Intermedio",
-            description: "Entorno de ejecución para JavaScript del lado del servidor, ideal para APIs y aplicaciones escalables",
-            image: "src/assets/Imagenes/java.png",
-            since: "2021"
-        },
-        {
-            id: 3,
-            name: "Python",
-            category: "Lenguaje",
-            level: "Avanzado",
-            description: "Lenguaje de programación versátil para desarrollo web, análisis de datos y automatización",
-            image: "src/assets/Imagenes/python.png",
-            since: "2020"
-        },
-        {
-            id: 4,
-            name: "MongoDB",
-            category: "Base de Datos",
-            level: "Intermedio",
-            description: "Base de datos NoSQL orientada a documentos para aplicaciones modernas y escalables",
-            image: "src/assets/Imagenes/mongo.png",
-            since: "2021"
-        },
-        {
-            id: 5,
-            name: "TypeScript",
-            category: "Lenguaje",
-            level: "Intermedio",
-            description: "Superset de JavaScript que añade tipado estático para desarrollo más robusto y mantenible",
-            image: "src/assets/Imagenes/typescript.png",
-            since: "2022"
-        },
-        {
-            id: 6,
-            name: "Docker",
-            category: "DevOps",
-            level: "Intermedio",
-            description: "Plataforma para desarrollar, enviar y ejecutar aplicaciones en contenedores",
-            image: "src/assets/Imagenes/docker.png",
-            since: "2021"
-        },
-        {
-            id: 7,
-            name: "Git",
-            category: "Herramientas",
-            level: "Avanzado",
-            description: "Sistema de control de versiones distribuido para gestión eficiente de proyectos de software",
-            image: "src/assets/Imagenes/git.png",
-            since: "2020"
-        },
-        {
-            id: 8,
-            name: "JavaScript",
-            category: "Lenguaje",
-            level: "Avanzado",
-            description: "Lenguaje de programación para desarrollo web frontend y backend con Node.js",
-            image: "src/assets/Imagenes/javaScript.png",
-            since: "2020"
-        }
-        ,
-        {
-            id: 9,
-            name: "MySQL",
-            category: "Base de Datos",
-            level: "Avanzado",
-            description: "Lenguaje de programación para desarrollo web frontend y backend con Node.js",
-            image: "src/assets/Imagenes/MySQL.png",
-            since: "2020"
-        },
-        {
-            id: 11,
-            name: "PostgreSQL",
-            category: "Base de Datos",
-            level: "Avanzado",
-            description: "Lenguaje de programación para desarrollo web frontend y backend con Node.js",
-            image: "src/assets/Imagenes/PostgreSQL.png",
-            since: "2020"
-        }
+        { id: 1, name: "React", category: "Frontend", level: "Básico", description: "Biblioteca para construir interfaces de usuario interactivas y modernas.", image: reactImage, since: "2022" },
+        { id: 10, name: "Angular", category: "Frontend", level: "Básico", description: "Framework para construir aplicaciones web robustas y escalables.", image: angularImage, since: "2022" },
+        { id: 2, name: "JAVA", category: "Backend", level: "Intermedio", description: "Lenguaje robusto y versátil para aplicaciones empresariales y de alto rendimiento.", image: javaImage, since: "2021" },
+        { id: 3, name: "Python", category: "Lenguaje", level: "Avanzado", description: "Lenguaje versátil para desarrollo web, análisis de datos y automatización.", image: pythonImage, since: "2020" },
+        { id: 4, name: "MongoDB", category: "Base de Datos", level: "Intermedio", description: "Base de datos NoSQL orientada a documentos para aplicaciones modernas.", image: mongoImage, since: "2021" },
+        { id: 5, name: "TypeScript", category: "Lenguaje", level: "Intermedio", description: "Superset de JavaScript con tipado estático para un desarrollo más robusto.", image: typescriptImage, since: "2022" },
+        { id: 6, name: "Docker", category: "DevOps", level: "Intermedio", description: "Plataforma para desarrollar, enviar y ejecutar aplicaciones en contenedores.", image: dockerImage, since: "2021" },
+        { id: 7, name: "Git", category: "Herramientas", level: "Avanzado", description: "Sistema de control de versiones distribuido para la gestión de código.", image: gitImage, since: "2020" },
+        { id: 8, name: "JavaScript", category: "Lenguaje", level: "Avanzado", description: "El lenguaje de la web, esencial para el desarrollo frontend y backend.", image: javascriptImage, since: "2020" },
+        { id: 9, name: "MySQL", category: "Base de Datos", level: "Avanzado", description: "Sistema de gestión de bases de datos relacional de código abierto.", image: mysqlImage, since: "2020" },
+        { id: 11, name: "PostgreSQL", category: "Base de Datos", level: "Avanzado", description: "Sistema de gestión de bases de datos relacional orientado a objetos y de código abierto.", image: postgresqlImage, since: "2020" }
     ];
 
     const categories = [...new Set(technologies.map(tech => tech.category))];

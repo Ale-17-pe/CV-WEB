@@ -1,15 +1,15 @@
-import reactImage from '../assets/Imagenes/react.png';
-import angularImage from '../assets/Imagenes/angular.png';
-import javaImage from '../assets/Imagenes/java.png';
-import pythonImage from '../assets/Imagenes/python.png';
-import mongoImage from '../assets/Imagenes/mongo.png';
-import typescriptImage from '../assets/Imagenes/Typescript.png';
-import dockerImage from '../assets/Imagenes/docker.png';
-import gitImage from '../assets/Imagenes/git.png';
-import javascriptImage from '../assets/Imagenes/JavaScript.png';
-import mysqlImage from '../assets/Imagenes/MySQL.png';
-import postgresqlImage from '../assets/Imagenes/PostgreSQL.png';    
-import './stylePage/TechnologiesPage.css';
+// Pega este bloque corregido en la parte superior de tu archivo
+import reactImage from '../assets/Imagenes/react.png';         // Correcto: 'r' minúscula
+import angularImage from '../assets/Imagenes/angular.png';     // Correcto: 'a' minúscula
+import javaImage from '../assets/Imagenes/java.png';         // Correcto: 'j' minúscula
+import pythonImage from '../assets/Imagenes/python.png';       // Correcto: 'p' minúscula
+import mongoImage from '../assets/Imagenes/mongo.png';       // Correcto: 'm' minúscula
+import typescriptImage from '../assets/Imagenes/Typescript.png'; // Correcto: 'T' mayúscula
+import dockerImage from '../assets/Imagenes/docker.png';       // Correcto: 'd' minúscula
+import gitImage from '../assets/Imagenes/git.png';           // Correcto: 'g' minúscula
+import javascriptImage from '../assets/Imagenes/JavaScript.png'; // Correcto: 'J' y 'S' mayúsculas
+import mysqlImage from '../assets/Imagenes/MySQL.png';         // Correcto: 'M' 'S' 'Q' 'L' mayúsculas
+import postgresqlImage from '../assets/Imagenes/PostgreSQL.png'; // Correcto: 'P' 'S' 'Q' 'L' mayúsculas
 
 interface Technology {
     id: number;

@@ -27,7 +27,7 @@ export const cvData = {
             id: 1,
             title: "Automatización de sistema",
             description: "Plataforma completa membresías y asistencias ",
-            image: "/src/Imagenes/logo.png",
+            image: "/src/Imagenes/Logo.png",
             details: [
                 "Dashboard en tiempo real",
                 "Sistema de alertas automáticas",

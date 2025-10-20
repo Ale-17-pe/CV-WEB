@@ -3,12 +3,12 @@ import angularImage from '../assets/Imagenes/angular.png';
 import javaImage from '../assets/Imagenes/java.png';
 import pythonImage from '../assets/Imagenes/python.png';
 import mongoImage from '../assets/Imagenes/mongo.png';
-import typescriptImage from '../assets/Imagenes/typescript.png';
+import typescriptImage from '../assets/Imagenes/Typescript.png';
 import dockerImage from '../assets/Imagenes/docker.png';
 import gitImage from '../assets/Imagenes/git.png';
-import javascriptImage from '../assets/Imagenes/javaScript.png';
+import javascriptImage from '../assets/Imagenes/JavaScript.png';
 import mysqlImage from '../assets/Imagenes/MySQL.png';
-import postgresqlImage from '../assets/Imagenes/PostgreSQL.png';
+import postgresqlImage from '../assets/Imagenes/PostgreSQL.png';    
 import './stylePage/TechnologiesPage.css';
 
 interface Technology {

@@ -1,4 +1,5 @@
 import './stylePage/CybersecurityPage.css';
+import wiresharkImage from '../assets/Imagenes/Wireshark.png';
 
 interface CybersecurityTool {
     id: number;
@@ -13,41 +14,36 @@ interface CybersecurityTool {
 export const CybersecurityPage = () => {
     const cybersecurityTools: CybersecurityTool[] = [
         {
-            id: 1,
-            name: "Wireshark",
-            category: "Análisis de Red",
-            description: "Analizador de protocolos de red para troubleshooting y análisis de seguridad",
-            image: "src/assets/Imagenes/Wireshark.png",
+            id: 1, name: "Wireshark", category: "Análisis de Red",
+            description: "Analizador de protocolos para troubleshooting y análisis de seguridad.",
+            image: wiresharkImage,
             features: ["Análisis de paquetes", "Inspección profunda", "Filtrado avanzado"],
-            useCase: "Detección de anomalías en red"
+            useCase: "Detección de anomalías en la red"
         },
+        /*
         {
-            id: 2,
-            name: "Metasploit",
-            category: "Pentesting",
-            description: "Framework de testing de penetración para desarrollo y ejecución de exploits",
-            image: "src/assets/Imagenes/metasploit.png",
-            features: ["Exploit development", "Vulnerability scanning", "Payload generation"],
+            id: 2, name: "Metasploit", category: "Pentesting",
+            description: "Framework de testing de penetración para desarrollo y ejecución de exploits.",
+            image: metasploitImage,
+            features: ["Desarrollo de Exploits", "Escaneo de vulnerabilidades", "Generación de Payloads"],
             useCase: "Evaluación de vulnerabilidades"
         },
         {
-            id: 3,
-            name: "Nmap",
-            category: "Escaneo de Red",
-            description: "Herramienta de descubrimiento de red y auditoría de seguridad",
-            image: "src/assets/Imagenes/nmap.png",
-            features: ["Port scanning", "OS detection", "Service version detection"],
+            id: 3, name: "Nmap", category: "Escaneo de Red",
+            description: "Herramienta de descubrimiento de red y auditoría de seguridad.",
+            image: nmapImage,
+            features: ["Escaneo de puertos", "Detección de SO", "Detección de versiones de servicios"],
             useCase: "Reconocimiento de red"
         },
         {
-            id: 4,
-            name: "Burp Suite",
-            category: "Web Security",
-            description: "Plataforma integral para testing de seguridad de aplicaciones web",
-            image: "src/assets/Imagenes/burp.png",
-            features: ["Web vulnerability scanning", "Intercepting proxy", "Automated testing"],
-            useCase: "Auditoría web applications"
+            id: 4, name: "Burp Suite", category: "Web Security",
+            description: "Plataforma integral para testing de seguridad de aplicaciones web.",
+            image: burpImage,
+            features: ["Escaneo de vulnerabilidades web", "Proxy de intercepción", "Pruebas automatizadas"],
+            useCase: "Auditoría de aplicaciones web"
         }
+
+         */
     ];
 
     const categories = [...new Set(cybersecurityTools.map(tool => tool.category))];

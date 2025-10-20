@@ -12,7 +12,6 @@ export const AboutPage = () => {
             </div>
 
             <div className="about-content">
-                {/* Tarjeta de Información Personal */}
                 <div className="info-section">
                     <div className="section-header">
                         <h2 className="section-title">Información Personal</h2>

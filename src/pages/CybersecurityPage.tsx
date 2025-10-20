@@ -1,5 +1,4 @@
 import './stylePage/CybersecurityPage.css';
-import wiresharkImage from '../assets/Imagenes/Wireshark.png';
 interface CybersecurityTool {
     id: number;
     name: string;
@@ -15,7 +14,7 @@ export const CybersecurityPage = () => {
         {
             id: 1, name: "Wireshark", category: "Análisis de Red",
             description: "Analizador de protocolos para troubleshooting y análisis de seguridad.",
-            image: wiresharkImage,
+            image: "/assets/imagenes/wireshark.png",
             features: ["Análisis de paquetes", "Inspección profunda", "Filtrado avanzado"],
             useCase: "Detección de anomalías en la red"
         },

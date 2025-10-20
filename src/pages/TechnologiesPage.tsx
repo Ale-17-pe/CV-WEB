@@ -6,7 +6,7 @@ import mongoImage from '../assets/Imagenes/mongo.png';
 import typescriptImage from '../assets/Imagenes/typescript.png';
 import dockerImage from '../assets/Imagenes/docker.png';
 import gitImage from '../assets/Imagenes/git.png';
-import javascriptImage from '../assets/Imagenes/javascript.png';
+import javascriptImage from '../assets/Imagenes/javaScript.png';
 import mysqlImage from '../assets/Imagenes/MySQL.png';
 import postgresqlImage from '../assets/Imagenes/PostgreSQL.png';
 import './stylePage/TechnologiesPage.css';

@@ -1,0 +1,459 @@
+/* CybersecurityPage.css - Versión Optimizada */
+.cybersecurity-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+    padding: 2rem;
+    position: relative;
+}
+
+.cyber-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(188, 0, 255, 0.2);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* PROBLEMA CORREGIDO: Fondo del header igual que Portfolio */
+.cyber-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.7), rgba(13, 13, 13, 0.9)),
+        url('/images/cyber-security-bg.jpg') center/cover;
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.cyber-header:hover::before {
+    transform: scale(1.03);
+}
+
+.cyber-header::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #bc00ff, #00f5ff);
+    border-radius: 22px;
+    z-index: -2;
+    opacity: 0.3;
+    filter: blur(10px);
+}
+
+.cyber-title {
+    padding: 3rem;
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    font-weight: 700;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(188, 0, 255, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(0, 245, 255, 0.4) 0%, transparent 50%),
+        linear-gradient(45deg, #bc00ff, #00f5ff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    animation: cyberShimmer 6s ease-in-out infinite;
+}
+
+.cyber-subtitle {
+    color: #e0e0e0;
+    font-size: clamp(1.1rem, 2.5vw, 1.2rem);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* Categorías de herramientas optimizadas */
+.cyber-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.cyber-category {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(188, 0, 255, 0.3);
+    position: relative;
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(45deg, #bc00ff, #00f5ff);
+}
+
+.cyber-tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    gap: 1.5rem;
+}
+
+/* Tarjetas de herramientas optimizadas */
+.cyber-tool-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.25rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cyber-tool-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #bc00ff, transparent);
+}
+
+.cyber-tool-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(188, 0, 255, 0.25);
+    box-shadow: 0 12px 25px rgba(188, 0, 255, 0.15);
+}
+
+.tool-image {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, rgba(188, 0, 255, 0.1), rgba(0, 245, 255, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tool-image img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.tool-placeholder {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #bc00ff, #00f5ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.tool-content {
+    flex: 1;
+}
+
+.tool-name {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+.tool-description {
+    color: #cccccc;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.tool-features {
+    margin-bottom: 1.25rem;
+}
+
+.tool-features h4 {
+    color: #00f5ff;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.tool-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tool-features li {
+    color: #cccccc;
+    margin-bottom: 0.3rem;
+    padding-left: 1rem;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.tool-features li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #bc00ff;
+}
+
+.tool-use-case {
+    background: rgba(0, 245, 255, 0.08);
+    border: 1px solid rgba(0, 245, 255, 0.15);
+    border-radius: 6px;
+    padding: 0.8rem;
+    color: #ffffff;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.tool-use-case strong {
+    color: #00f5ff;
+}
+
+/* Sección de metodologías optimizada */
+.methodologies-section {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.methodologies-section h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.methodologies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+}
+
+.methodology-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.methodology-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 245, 255, 0.25);
+    box-shadow: 0 6px 20px rgba(0, 245, 255, 0.1);
+}
+
+.methodology-card h3 {
+    color: #00f5ff;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.methodology-card p {
+    color: #cccccc;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/* Efectos de fondo optimizados */
+.cyber-background-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cyber-floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(188, 0, 255, 0.04) 0%, transparent 70%);
+    animation: cyberFloat 20s infinite linear;
+}
+
+.cyber-shape-1 {
+    width: 120px;
+    height: 120px;
+    top: 15%;
+    left: 5%;
+    animation-duration: 25s;
+}
+
+.cyber-shape-2 {
+    width: 80px;
+    height: 80px;
+    bottom: 20%;
+    right: 8%;
+    animation-duration: 20s;
+    background: radial-gradient(circle, rgba(0, 245, 255, 0.04) 0%, transparent 70%);
+}
+
+/* Animaciones optimizadas */
+@keyframes cyberFloat {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+        transform: translate(20px, 30px) rotate(120deg);
+    }
+    66% {
+        transform: translate(-15px, 40px) rotate(240deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+@keyframes cyberShimmer {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== RESPONSIVE OPTIMIZADO ========== */
+@media (max-width: 768px) {
+    .cybersecurity-container {
+        padding: 1rem;
+    }
+
+    .cyber-header {
+        padding: 3rem 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .cyber-tools {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .cyber-tool-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem;
+        gap: 1rem;
+    }
+
+    .tool-image {
+        align-self: center;
+        width: 70px;
+        height: 70px;
+    }
+
+    .tool-image img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .methodologies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .methodologies-section {
+        padding: 1.5rem;
+    }
+
+    .methodologies-section h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cyber-header {
+        padding: 2rem 1rem;
+    }
+
+    .category-title {
+        font-size: 1.5rem;
+    }
+
+    .cyber-tool-card {
+        padding: 1rem;
+    }
+
+    .tool-name {
+        font-size: 1.2rem;
+    }
+
+    .methodologies-section {
+        padding: 1.25rem;
+    }
+
+    .methodology-card {
+        padding: 1.25rem;
+    }
+}
+
+/* Mobile muy pequeño */
+@media (max-width: 360px) {
+    .cybersecurity-container {
+        padding: 0.75rem;
+    }
+
+    .cyber-tool-card {
+        padding: 0.875rem;
+    }
+
+    .tool-image {
+        width: 55px;
+        height: 55px;
+    }
+
+    .tool-image img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .methodology-card {
+        padding: 1rem;
+    }
+}

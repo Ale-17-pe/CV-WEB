@@ -1,0 +1,534 @@
+/* PortfolioPage.css - Versión Optimizada */
+.portfolio-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+    padding: 2rem;
+    position: relative;
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 245, 255, 0.2);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* PROBLEMA CORREGIDO: Ruta de imagen */
+.portfolio-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(rgba(13, 13, 13, 0), rgba(13, 13, 13, 0.9)),
+        url('src/Imagenes/tec.png') center/cover; /* Ruta corregida */
+    z-index: 0;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-header:hover::before {
+    transform: scale(1.03);
+}
+
+.portfolio-header::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00f5ff, #bc00ff);
+    border-radius: 22px;
+    z-index: -2;
+    opacity: 0.3;
+    filter: blur(10px);
+}
+
+.portfolio-title {
+    padding: 3rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem); /* Responsive font */
+    font-weight: 700;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(0, 245, 255, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(188, 0, 255, 0.4) 0%, transparent 50%),
+        linear-gradient(45deg, #00f5ff, #bc00ff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    animation: shimmer 6s ease-in-out infinite;
+}
+
+.portfolio-subtitle {
+    color: #e0e0e0;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* Grid de proyectos optimizado */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Tarjetas de proyectos optimizadas */
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00f5ff, transparent);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 245, 255, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 245, 255, 0.15);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem 1.5rem 1rem;
+    gap: 1rem;
+}
+
+.project-title {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+    flex: 1;
+}
+
+.project-badge {
+    background: linear-gradient(45deg, #00f5ff, #bc00ff);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.badge-icon {
+    font-size: 1.1rem;
+}
+
+/* Imagen del proyecto optimizada */
+.project-image {
+    height: 180px;
+    background: linear-gradient(45deg, rgba(0, 245, 255, 0.1), rgba(188, 0, 255, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-placeholder {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+}
+
+.placeholder-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Contenido del proyecto optimizado */
+.project-content {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.project-description {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.project-details {
+    margin-bottom: 1.25rem;
+}
+
+.project-details h4 {
+    color: #00f5ff;
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+}
+
+.project-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-details li {
+    color: #cccccc;
+    margin-bottom: 0.4rem;
+    padding-left: 1rem;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.project-details li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #bc00ff;
+}
+
+/* Tecnologías optimizadas */
+.project-tech {
+    margin-bottom: 1.5rem;
+}
+
+.project-tech h4 {
+    color: #00f5ff;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.tech-tag {
+    background: linear-gradient(45deg, rgba(0, 245, 255, 0.1), rgba(188, 0, 255, 0.1));
+    color: #ffffff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(45deg, rgba(0, 245, 255, 0.15), rgba(188, 0, 255, 0.15));
+}
+
+/* Arquitectura optimizada */
+.project-architecture {
+    margin-bottom: 1.25rem;
+}
+
+.project-architecture h4 {
+    color: #00f5ff;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.architecture-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.architecture-tag {
+    background: linear-gradient(45deg, rgba(255, 165, 0, 0.1), rgba(255, 140, 0, 0.15));
+    color: #ffa500;
+    padding: 0.4rem 0.8rem;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+/* Enlaces optimizados */
+.project-links {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    flex: 1;
+    justify-content: center;
+    min-width: 110px;
+}
+
+.demo-link {
+    background: linear-gradient(45deg, #00f5ff, #bc00ff);
+    color: #0d0d0d;
+}
+
+.demo-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(0, 245, 255, 0.3);
+}
+
+.github-link {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.github-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-1px);
+}
+
+.docs-link, .arch-link {
+    background: transparent;
+    color: #00f5ff;
+    border: 1px solid #00f5ff;
+}
+
+.docs-link:hover, .arch-link:hover {
+    background: rgba(0, 245, 255, 0.08);
+    transform: translateY(-1px);
+}
+
+.link-icon {
+    font-size: 0.9rem;
+}
+
+/* Estado del proyecto optimizado */
+.project-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status-indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+/* Estadísticas optimizadas */
+.portfolio-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+    border-color: rgba(188, 0, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #00f5ff, #bc00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    color: #cccccc;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Animaciones unificadas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* ========== RESPONSIVE OPTIMIZADO ========== */
+@media (max-width: 768px) {
+    .portfolio-container {
+        padding: 1rem;
+    }
+
+    .portfolio-header {
+        padding: 3rem 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-header {
+        padding: 1.25rem 1.25rem 0.75rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .project-content {
+        padding: 0 1.25rem 1.25rem;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .project-link {
+        min-width: auto;
+    }
+
+    .portfolio-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-header {
+        padding: 2rem 1rem;
+    }
+
+    .project-image {
+        height: 150px;
+    }
+
+    .placeholder-icon {
+        font-size: 2rem;
+    }
+
+    .portfolio-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 1.25rem;
+    }
+
+    .stat-number {
+        font-size: 1.75rem;
+    }
+}
+
+/* Mobile muy pequeño */
+@media (max-width: 360px) {
+    .portfolio-container {
+        padding: 0.75rem;
+    }
+
+    .tech-tags,
+    .architecture-tags {
+        gap: 0.4rem;
+    }
+
+    .tech-tag,
+    .architecture-tag {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+
+    .project-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+}

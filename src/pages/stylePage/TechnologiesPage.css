@@ -1,0 +1,413 @@
+/* TechnologiesPage.css - Versión Optimizada */
+.technologies-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+    padding: 2rem;
+    position: relative;
+}
+
+.tech-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 245, 255, 0.2);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.tech-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(rgba(13, 13, 13, 0.7), rgba(13, 13, 13, 0.9)),
+        url('https://cdn.prod.website-files.com/637527824473dd1b12672280/637527824473dd171a672337_10%20tecnologias%20emergentes.jpg') center/cover;
+    z-index: 0; /* CORREGIDO: Cambiado de 0 a -1 */
+    transition: transform 0.5s ease;
+}
+
+.tech-header:hover::before {
+    transform: scale(1.03);
+}
+
+.tech-header::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00f5ff, #bc00ff);
+    border-radius: 22px;
+    z-index: -2;
+    opacity: 0.3;
+    filter: blur(10px);
+}
+
+.tech-title {
+    font-size: clamp(2.5rem, 5vw, 3rem); /* Responsive font */
+    font-weight: 700;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(0, 245, 255, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(188, 0, 255, 0.4) 0%, transparent 50%),
+        linear-gradient(45deg, #00f5ff, #bc00ff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1; /* CORREGIDO: Asegurar que esté sobre la imagen */
+    animation: shimmer 6s ease-in-out infinite;
+    padding: 2rem; /* Reducido padding */
+}
+
+.tech-subtitle {
+    color: #e0e0e0;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1; /* CORREGIDO: Asegurar que esté sobre la imagen */
+}
+
+/* Categorías de tecnologías optimizadas */
+.tech-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.tech-category {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(0, 245, 255, 0.3);
+    position: relative;
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(45deg, #00f5ff, #bc00ff);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+    gap: 2rem;
+}
+
+/* Tarjetas de tecnología optimizadas */
+.tech-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00f5ff, transparent);
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 245, 255, 0.25);
+    box-shadow: 0 12px 30px rgba(0, 245, 255, 0.15);
+}
+
+/* Imágenes optimizadas */
+.tech-image {
+    flex-shrink: 0;
+    width: 90px;
+    height: 90px;
+    border-radius: 16px;
+    background: linear-gradient(45deg, rgba(0, 245, 255, 0.1), rgba(188, 0, 255, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+}
+
+.tech-card:hover .tech-image {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, rgba(0, 245, 255, 0.15), rgba(188, 0, 255, 0.15));
+    border-color: rgba(0, 245, 255, 0.3);
+}
+
+.tech-image img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover .tech-image img {
+    transform: scale(1.05);
+}
+
+.tech-placeholder {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00f5ff, #bc00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.tech-content {
+    flex: 1;
+}
+
+.tech-name {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.tech-level {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tech-level.avanzado {
+    background: linear-gradient(45deg, rgba(0, 245, 255, 0.15), rgba(0, 245, 255, 0.3));
+    color: #00f5ff;
+    border: 1px solid rgba(0, 245, 255, 0.25);
+}
+
+.tech-level.intermedio {
+    background: linear-gradient(45deg, rgba(188, 0, 255, 0.15), rgba(188, 0, 255, 0.3));
+    color: #bc00ff;
+    border: 1px solid rgba(188, 0, 255, 0.25);
+}
+
+.tech-level.básico {
+    background: rgba(255, 255, 255, 0.08);
+    color: #cccccc;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tech-description {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.tech-meta {
+    color: #888888;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Efectos de fondo optimizados */
+.background-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 245, 255, 0.04) 0%, transparent 70%);
+    animation: float 20s infinite linear;
+}
+
+.shape-1 {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    right: 5%;
+    animation-duration: 25s;
+}
+
+.shape-2 {
+    width: 100px;
+    height: 100px;
+    bottom: 20%;
+    left: 10%;
+    animation-duration: 30s;
+    background: radial-gradient(circle, rgba(188, 0, 255, 0.04) 0%, transparent 70%);
+}
+
+/* Animaciones optimizadas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+        transform: translate(20px, 30px) rotate(120deg);
+    }
+    66% {
+        transform: translate(-15px, 40px) rotate(240deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/* ========== RESPONSIVE OPTIMIZADO ========== */
+@media (max-width: 768px) {
+    .technologies-container {
+        padding: 1rem;
+    }
+
+    .tech-header {
+        padding: 3rem 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .tech-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1.25rem;
+    }
+
+    .tech-image {
+        align-self: center;
+        width: 100px;
+        height: 100px;
+    }
+
+    .tech-image img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .tech-title {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-header {
+        padding: 2rem 1rem;
+    }
+
+    .category-title {
+        font-size: 1.5rem;
+    }
+
+    .tech-card {
+        padding: 1.25rem;
+    }
+
+    .tech-image {
+        width: 85px;
+        height: 85px;
+    }
+
+    .tech-image img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .tech-name {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile muy pequeño */
+@media (max-width: 360px) {
+    .technologies-container {
+        padding: 0.75rem;
+    }
+
+    .tech-card {
+        padding: 1rem;
+    }
+
+    .tech-image {
+        width: 75px;
+        height: 75px;
+    }
+
+    .tech-image img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tech-level {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.8rem;
+    }
+}

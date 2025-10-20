@@ -24,7 +24,7 @@ export const ContactPage = () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
  try {
-      const response = await fetch('https://formspree.io/f/xkgqekra', { // <-- PEGA TU URL AQUÍ
+      const response = await fetch('https://formspree.io/f/xkgqekra', { 
         method: 'POST',
         body: JSON.stringify(formData),
         headers: {

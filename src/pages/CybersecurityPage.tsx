@@ -17,7 +17,7 @@ export const CybersecurityPage = () => {
             name: "Wireshark",
             category: "Análisis de Red",
             description: "Analizador de protocolos de red para troubleshooting y análisis de seguridad",
-            image: "src/Imagenes/Wireshark.png",
+            image: "src/assets/Imagenes/Wireshark.png",
             features: ["Análisis de paquetes", "Inspección profunda", "Filtrado avanzado"],
             useCase: "Detección de anomalías en red"
         },
@@ -26,7 +26,7 @@ export const CybersecurityPage = () => {
             name: "Metasploit",
             category: "Pentesting",
             description: "Framework de testing de penetración para desarrollo y ejecución de exploits",
-            image: "/images/metasploit.png",
+            image: "src/assets/Imagenes/metasploit.png",
             features: ["Exploit development", "Vulnerability scanning", "Payload generation"],
             useCase: "Evaluación de vulnerabilidades"
         },
@@ -35,7 +35,7 @@ export const CybersecurityPage = () => {
             name: "Nmap",
             category: "Escaneo de Red",
             description: "Herramienta de descubrimiento de red y auditoría de seguridad",
-            image: "/images/nmap.png",
+            image: "src/assets/Imagenes/nmap.png",
             features: ["Port scanning", "OS detection", "Service version detection"],
             useCase: "Reconocimiento de red"
         },
@@ -44,7 +44,7 @@ export const CybersecurityPage = () => {
             name: "Burp Suite",
             category: "Web Security",
             description: "Plataforma integral para testing de seguridad de aplicaciones web",
-            image: "/images/burp.png",
+            image: "src/assets/Imagenes/burp.png",
             features: ["Web vulnerability scanning", "Intercepting proxy", "Automated testing"],
             useCase: "Auditoría web applications"
         }

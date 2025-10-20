@@ -19,7 +19,7 @@ export const TechnologiesPage = () => {
             category: "Frontend",
             level: "Básico",
             description: "Biblioteca de JavaScript para construir interfaces de usuario interactivas y modernas",
-            image: "/src/Imagenes/react.png",
+            image: "src/assets/Imagenes/react.png",
             since: "2022"
         },
         
@@ -29,7 +29,7 @@ export const TechnologiesPage = () => {
             category: "Frontend",
             level: "Básico",
             description: "Biblioteca de JavaScript para construir interfaces de usuario interactivas y modernas",
-            image: "/src/Imagenes/angular.png",
+            image: "src/assets/Imagenes/angular.png",
             since: "2022"
         },
 
@@ -40,7 +40,7 @@ export const TechnologiesPage = () => {
             category: "Backend",
             level: "Intermedio",
             description: "Entorno de ejecución para JavaScript del lado del servidor, ideal para APIs y aplicaciones escalables",
-            image: "src/Imagenes/java.png",
+            image: "src/assets/Imagenes/java.png",
             since: "2021"
         },
         {
@@ -49,7 +49,7 @@ export const TechnologiesPage = () => {
             category: "Lenguaje",
             level: "Avanzado",
             description: "Lenguaje de programación versátil para desarrollo web, análisis de datos y automatización",
-            image: "src/Imagenes/python.png",
+            image: "src/assets/Imagenes/python.png",
             since: "2020"
         },
         {
@@ -58,7 +58,7 @@ export const TechnologiesPage = () => {
             category: "Base de Datos",
             level: "Intermedio",
             description: "Base de datos NoSQL orientada a documentos para aplicaciones modernas y escalables",
-            image: "src/Imagenes/mongo.png",
+            image: "src/assets/Imagenes/mongo.png",
             since: "2021"
         },
         {
@@ -67,7 +67,7 @@ export const TechnologiesPage = () => {
             category: "Lenguaje",
             level: "Intermedio",
             description: "Superset de JavaScript que añade tipado estático para desarrollo más robusto y mantenible",
-            image: "/images/typescript.png",
+            image: "src/assets/Imagenes/typescript.png",
             since: "2022"
         },
         {
@@ -76,7 +76,7 @@ export const TechnologiesPage = () => {
             category: "DevOps",
             level: "Intermedio",
             description: "Plataforma para desarrollar, enviar y ejecutar aplicaciones en contenedores",
-            image: "src/Imagenes/docker.png",
+            image: "src/assets/Imagenes/docker.png",
             since: "2021"
         },
         {
@@ -85,7 +85,7 @@ export const TechnologiesPage = () => {
             category: "Herramientas",
             level: "Avanzado",
             description: "Sistema de control de versiones distribuido para gestión eficiente de proyectos de software",
-            image: "src/Imagenes/git.png",
+            image: "src/assets/Imagenes/git.png",
             since: "2020"
         },
         {
@@ -94,7 +94,7 @@ export const TechnologiesPage = () => {
             category: "Lenguaje",
             level: "Avanzado",
             description: "Lenguaje de programación para desarrollo web frontend y backend con Node.js",
-            image: "src/Imagenes/javaScript.png",
+            image: "src/assets/Imagenes/javaScript.png",
             since: "2020"
         }
         ,
@@ -104,7 +104,7 @@ export const TechnologiesPage = () => {
             category: "Base de Datos",
             level: "Avanzado",
             description: "Lenguaje de programación para desarrollo web frontend y backend con Node.js",
-            image: "src/Imagenes/MySQL.png",
+            image: "src/assets/Imagenes/MySQL.png",
             since: "2020"
         },
         {
@@ -113,7 +113,7 @@ export const TechnologiesPage = () => {
             category: "Base de Datos",
             level: "Avanzado",
             description: "Lenguaje de programación para desarrollo web frontend y backend con Node.js",
-            image: "src/Imagenes/PostgreSQL.png",
+            image: "src/assets/Imagenes/PostgreSQL.png",
             since: "2020"
         }
     ];
